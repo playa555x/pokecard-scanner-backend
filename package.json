@@ -1,0 +1,20 @@
+{
+  "name": "pokecard-scanner-backend",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "bun run --watch src/index.ts",
+    "start": "bun run src/index.ts",
+    "db:init": "bun run src/db/init.ts",
+    "cron:prices": "bun run src/cron/price_tracker.ts"
+  },
+  "dependencies": {
+    "hono": "^4.4.0",
+    "sharp": "^0.33.4",
+    "node-cron": "^3.0.3"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/node-cron": "^3.0.11"
+  }
+}
