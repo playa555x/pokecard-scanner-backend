@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: pokecard-scanner-backend
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: POKEMON_TCG_API_KEY
+        value: ""
+    disk:
+      name: pokecard-data
+      mountPath: /app/data
+      sizeGB: 1
